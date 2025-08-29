@@ -21,7 +21,7 @@ It uses JWT token-based authentication and serves a minimal frontend for registr
 0. **Configure database connection**
 put your mysql user and password
 then create database
-CREATE DATABASE onlymembersdb;
+CREATE DATABASE OnlyMemberDb;
 
 1. **Clone the repository**
 git clone https://github.com/anveetpal01/HoshoOnlyMembers
