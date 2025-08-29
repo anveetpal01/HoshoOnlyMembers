@@ -40,8 +40,41 @@ cd HoshoOnlyMembers
 - Register a new member, verify OTP, then login.
 - Access the dashboard to add purchases, view points, and redeem coupons.
 
+### Data Flow Diagram
+<img width="512" height="768" alt="dataFlow" src="https://github.com/user-attachments/assets/8164079d-07b2-41ef-97b9-7b3b1c82ecdd" />
 
-<img width="1024" height="1536" alt="dataFlow" src="https://github.com/user-attachments/assets/8164079d-07b2-41ef-97b9-7b3b1c82ecdd" />
+### Database Schema (Tables + Sample Data)
+CREATE TABLE Members (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Mobile VARCHAR(10) NOT NULL UNIQUE,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    Otp VARCHAR(10),
+    IsVerified BOOLEAN DEFAULT FALSE,
+    Points INT DEFAULT 0
+);
+
+CREATE TABLE PointTransactions (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    MemberId INT NOT NULL,
+    PurchaseAmount INT NOT NULL,
+    PointsAdded INT NOT NULL,
+    Date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (MemberId) REFERENCES Members(Id)
+);
+
+CREATE TABLE Coupons (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    MemberId INT NOT NULL,
+    PointsRedeemed INT NOT NULL,
+    ValueInRupees INT NOT NULL,
+    CouponCode VARCHAR(50) NOT NULL UNIQUE,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (MemberId) REFERENCES Members(Id)
+);
 
 
 
+### Postman Collection URL - 
+URL- https://github.com/anveetpal01/HoshoOnlyMembers/blob/main/OnlyMemberCollection.postman_collection.json
