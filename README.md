@@ -1,4 +1,4 @@
-# OnlyMembers
+# OnlyMembers  
 
 OnlyMembers is a simple RESTful API built with .NET 8 and MySQL to manage members, their reward points, and coupon redemptions.  
 It uses JWT token-based authentication and serves a minimal frontend for registration, login, and dashboard.
@@ -17,23 +17,23 @@ It uses JWT token-based authentication and serves a minimal frontend for registr
 ---
 
 
-### Setup
-0. **Configure database connection**  
+### Setup  
+0. **Configure database connection**    
 put your mysql user and password in appsettings.json  
 then create database  
 CREATE DATABASE OnlyMemberDb;
 
-1. **Clone the repository**
-git clone http://github.com/anveetpal01/HoshoOnlyMembers
+1. **Clone the repository**  
+git clone http://github.com/anveetpal01/HoshoOnlyMembers  
 cd HoshoOnlyMembers  
-dotnet restore
+dotnet restore  
 
-3. **Run database migrations**
+3. **Run database migrations**  
    dotnet tool install --global dotnet-ef  
-   dotnet ef database update
+   dotnet ef database update  
    
-5. **Run the application**
-  
+5. **Run the application**  
+  dotnet run
 
 ### Using the Frontend
 
