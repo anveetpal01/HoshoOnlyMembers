@@ -74,7 +74,9 @@ CREATE TABLE Coupons (
     CouponCode VARCHAR(50) NOT NULL UNIQUE,
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (MemberId) REFERENCES Members(Id)
-);
+);  
+
+
 Sample Data -  
 INSERT INTO Members (Id, Name, Mobile, Email, PasswordHash, Otp, IsVerified, Points) VALUES
 (5, 'user5', '2222222222', 'user5@example.com', 'AQAAAAIAAYagAAAAEHONaMYtey2UnMdqW+8dtcmplVanIG5NlJgNApPnzC3vIYqDJUYg6VZRCGlcSMOcTQ==', '1234', TRUE, 99550),
