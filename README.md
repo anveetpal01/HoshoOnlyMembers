@@ -19,8 +19,8 @@ It uses JWT token-based authentication and serves a minimal frontend for registr
 
 ### Setup
 0. **Configure database connection**
-put your mysql user and password
-then create database
+put your mysql user and password in appsettings.json  
+then create database  
 CREATE DATABASE OnlyMemberDb;
 
 1. **Clone the repository**
