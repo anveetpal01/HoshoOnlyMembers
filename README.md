@@ -1,6 +1,6 @@
 # OnlyMembers
 
-OnlyMembers is a simple RESTful API built with .NET 8 and MySQL to manage members, their reward points, and coupon redemptions. 
+OnlyMembers is a simple RESTful API built with .NET 8 and MySQL to manage members, their reward points, and coupon redemptions.  
 It uses JWT token-based authentication and serves a minimal frontend for registration, login, and dashboard.
 
 ---
