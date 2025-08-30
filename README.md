@@ -8,7 +8,7 @@ It uses JWT token-based authentication and serves a minimal frontend for registr
 ## Features
 
 - Member registration and OTP verification (dummy OTP)
-- JWT-based authentication (login with member name)
+- JWT-based authentication (login with member name & password)
 - Add reward points based on purchases (₹100 purchase = 10 points)
 - View total points for a member
 - Redeem points for coupon codes (100 points = ₹10 coupon)
@@ -24,7 +24,7 @@ then create database
 CREATE DATABASE OnlyMemberDb;
 
 1. **Clone the repository**
-git clone https://github.com/anveetpal01/HoshoOnlyMembers
+git clone http://github.com/anveetpal01/HoshoOnlyMembers
 cd HoshoOnlyMembers
 
 3. **Run database migrations**
@@ -36,7 +36,7 @@ cd HoshoOnlyMembers
 
 ### Using the Frontend
 
-- navigate to `https://localhost:5002/index.html`
+- navigate to `http://localhost:5002/index.html`
 - Register a new member, verify OTP, then login.
 - Access the dashboard to add purchases, view points, and redeem coupons.
 
