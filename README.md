@@ -24,7 +24,7 @@ then create database
 CREATE DATABASE OnlyMemberDb;
 
 1. **Clone the repository**  
-git clone https://github.com/anveetpal01/HoshoOnlyMembers  
+git clone https://github.com/anveetpal01/HoshoOnlyMembers.git  
 cd HoshoOnlyMembers  
 dotnet restore
 
