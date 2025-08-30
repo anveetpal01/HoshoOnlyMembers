@@ -29,9 +29,10 @@ cd HoshoOnlyMembers
 dotnet restore
 
 3. **Run database migrations**  
-   dotnet tool install --global dotnet-ef  
-   dotnet ef database update  
-   
+   dotnet tool install --global dotnet-ef
+   dotnet ef migrations add Initial create
+   dotnet ef database update
+   (add sample data)  
 5. **Run the application**  
   dotnet run
 
