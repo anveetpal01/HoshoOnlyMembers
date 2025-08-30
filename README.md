@@ -44,7 +44,8 @@ dotnet restore
 ### Data Flow Diagram
 <img width="512" height="768" alt="dataFlow" src="https://github.com/user-attachments/assets/8164079d-07b2-41ef-97b9-7b3b1c82ecdd" />
 
-### Database Schema (Tables + Sample Data)
+### Database Schema (Tables + Sample Data)  
+Database -  
 CREATE TABLE Members (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
@@ -74,8 +75,25 @@ CREATE TABLE Coupons (
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (MemberId) REFERENCES Members(Id)
 );
+Sample Data -  
+INSERT INTO Members (Id, Name, Mobile, Email, PasswordHash, Otp, IsVerified, Points) VALUES
+(5, 'user5', '2222222222', 'user5@example.com', 'AQAAAAIAAYagAAAAEHONaMYtey2UnMdqW+8dtcmplVanIG5NlJgNApPnzC3vIYqDJUYg6VZRCGlcSMOcTQ==', '1234', TRUE, 99550),
+(6, 'user6', '4444444444', 'user6@example.com', 'AQAAAAIAAYagAAAAEM/2bTH1udnf9KBPqDiSiKJ8uJnhCiPn3aof35eA+sDQtrNVak0b62kcJhZFaM2LHw==', '1234', TRUE, 0),
+(7, 'user7', '7777777777', 'user7@example.com', 'AQAAAAIAAYagAAAAEMjjGu0Esy1lIRnutGUqFXyJe5KrTAiKm/mRaBc15vtpHRDV3sVgYyijhewcPFcHlw==', '1234', TRUE, 0);  
+
+INSERT INTO PointTransactions (Id, MemberId, PurchaseAmount, PointsAdded, Date) VALUES
+(1, 5, 500, 50, '2025-08-29 16:19:50.481480'),
+(2, 5, 1000, 100, '2025-08-29 16:22:03.359724'),
+(3, 7, 1000, 100, '2025-08-29 17:41:57.444956'),
+(4, 5, 1000000, 100000, '2025-08-29 17:50:55.578118');  
+
+INSERT INTO Coupons (Id, MemberId, PointsRedeemed, ValueInRupees, CouponCode, CreatedAt) VALUES
+(1, 5, 100, 10, 'CUP-E60F3BAD', '2025-08-29 16:25:01.565312'),
+(2, 7, 100, 10, 'CUP-9E267EC0', '2025-08-29 17:42:11.696384'),
+(3, 5, 500, 50, 'CUP-74BBDBE7', '2025-08-29 17:51:07.398616');  
 
 
+(Note - password for user5 is 1234abcdqw)
 
 ### Postman Collection URL - 
 URL- https://github.com/anveetpal01/HoshoOnlyMembers/blob/main/OnlyMemberCollection.postman_collection.json
