@@ -18,21 +18,22 @@ It uses JWT token-based authentication and serves a minimal frontend for registr
 
 
 ### Setup
-0. **Configure database connection**
+0. **Configure database connection**  
 put your mysql user and password in appsettings.json  
 then create database  
 CREATE DATABASE OnlyMemberDb;
 
 1. **Clone the repository**
 git clone http://github.com/anveetpal01/HoshoOnlyMembers
-cd HoshoOnlyMembers
+cd HoshoOnlyMembers  
+dotnet restore
 
 3. **Run database migrations**
-   dotnet tool install --global dotnet-ef
+   dotnet tool install --global dotnet-ef  
    dotnet ef database update
    
 5. **Run the application**
-  dotnet run
+  
 
 ### Using the Frontend
 
