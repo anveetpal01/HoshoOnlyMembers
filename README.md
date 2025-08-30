@@ -26,7 +26,7 @@ CREATE DATABASE OnlyMemberDb;
 1. **Clone the repository**  
 git clone http://github.com/anveetpal01/HoshoOnlyMembers  
 cd HoshoOnlyMembers  
-dotnet restore  
+dotnet restore
 
 3. **Run database migrations**  
    dotnet tool install --global dotnet-ef  
