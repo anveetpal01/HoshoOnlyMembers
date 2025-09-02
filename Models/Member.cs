@@ -9,7 +9,7 @@ namespace OnlyMembers.Models
         [Required, MaxLength(100)]
         public string Name { get; set; }
 
-        [Required, MaxLength(10)]
+        [Required, MaxLength(15), Phone]
         public string Mobile { get; set; }
 
         [Required, EmailAddress]
