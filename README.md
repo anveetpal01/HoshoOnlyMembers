@@ -99,4 +99,4 @@ INSERT INTO Coupons (Id, MemberId, PointsRedeemed, ValueInRupees, CouponCode, Cr
 (Note - password for user5 is 1234abcdqw)
 
 ### Postman Collection URL - 
-URL- https://github.com/anveetpal01/HoshoOnlyMembers/blob/main/OnlyMemberCollection.postman_collection.json
+URL- https://web.postman.co/workspace/My-Workspace~49896187-d5f8-4763-8639-c00ec7d9f91e/collection/42579381-3982db35-9bde-4c72-b0d7-2488e9f6a1f3?action=share&creator=42579381&action_performed=login
